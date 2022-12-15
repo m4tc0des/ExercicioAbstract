@@ -20,13 +20,10 @@ namespace ExercicioAbstract.Entities
         public override double Tax()
         {
             if (HealthExpenditures < 20000.00)
-            {
-                return (HealthExpenditures * 15) / 100;
-            }
+                return HealthExpenditures * 0.15;
             else if (HealthExpenditures >= 20000.00)
-            {
-                return (HealthExpenditures * 25) / 100;
-            }
+                return HealthExpenditures * 0.25;
+
             return HealthExpenditures;
         }
     }

@@ -15,18 +15,7 @@ namespace ExercicioAbstract.Entities
         {
             NumberOfEmployees = numberOfEmployees;
         }
-        public override double Tax()
-        {
-            double sum = 0;
-            if (NumberOfEmployees > 10)
-            {
-                sum = (this.AnualIncome * 14) / 100;
-            }
-            else
-            {
-                sum = (this.AnualIncome * 16) / 100;
-            }
-            return sum;
-        }
+
+        public override double Tax() => NumberOfEmployees > 10 ? this.AnualIncome * 0.14: this.AnualIncome * 0.16;
     }
 }
